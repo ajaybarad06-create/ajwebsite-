@@ -1,1 +1,8 @@
-{"scripts":{"start":"python3 -m http.server 4173","check":"python3 - <<'PY'\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nfor file in ['index.html','styles.css','script.js']:\n    assert Path(file).read_text().strip(), f'{file} is empty'\nclass Parser(HTMLParser):\n    pass\nParser().feed(Path('index.html').read_text())\nprint('Static site files are present and index.html parses successfully.')\nPY"},"devDependencies":{}}
+{
+  "name": "ajaysinh-personal-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A portable editorial portfolio and self-hosted content studio for ajaysinh.com",
+  "scripts": { "start": "node server.mjs" },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,134 @@
+{
+  "identity": {
+    "name": "Ajaysinh Barad",
+    "role": "Product design · AI · Interactive worlds",
+    "headline": "From game worlds to enterprise systems.",
+    "intro": "I lead design for IBM’s Engineering Lifecycle Management portfolio. My path into enterprise began with sketchbooks, digital art and games—and still shapes how I think about systems, feedback and intelligent products.",
+    "availability": "Open to ambitious ideas",
+    "email": "ajaybarad06@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ajaysinh-rajput"
+  },
+  "projects": [
+    {
+      "slug": "adaptive-experience-engine",
+      "title": "Adaptive Experience Engine",
+      "category": "AI",
+      "year": "2026",
+      "summary": "An adaptive experience platform designed to help enterprise software respond to each user’s role, context, and goals.",
+      "role": "Founder · Product designer",
+      "status": "Independent concept in progress",
+      "featured": true,
+      "body": "A self-initiated product concept exploring how digital products could adapt to different user goals, levels of expertise, and context. I defined the product strategy, experience architecture, interaction model, design system, and platform vision. The concept is currently in design, validation, and prototyping."
+    },
+    {
+      "slug": "rhapsody",
+      "title": "Rhapsody Systems Engineering",
+      "category": "Enterprise",
+      "year": "",
+      "summary": "Making SysML v2 work legible to engineering teams.",
+      "role": "Product design",
+      "status": "Selected work",
+      "featured": true,
+      "body": "Architected a unified visual language and scalable interaction framework, transforming the complexity of SysML v2 into an intuitive enterprise systems engineering experience."
+    },
+    {
+      "slug": "tririga",
+      "title": "IBM TRIRIGA Application Suite",
+      "category": "Enterprise",
+      "year": "",
+      "summary": "One connected experience across a complex product suite.",
+      "role": "Product branding · Enterprise UX · Visual design",
+      "status": "Selected work",
+      "featured": true,
+      "body": "Architecting a unified enterprise experience for IBM TRIRIGA, connecting applications, accelerators, and workflows into a more cohesive product ecosystem."
+    },
+    {
+      "slug": "rive",
+      "title": "RIVE",
+      "category": "Games · AI",
+      "year": "",
+      "summary": "A live-streaming game built around real-time participation.",
+      "role": "Product strategy · Experience design · AI intelligence",
+      "status": "Selected work",
+      "featured": true,
+      "body": "Shaping RIVE into an immersive live-streaming gaming experience, bringing together interactive design, real-time engagement, and AI-powered insights."
+    },
+    {
+      "slug": "rhapsody-identity",
+      "title": "IBM Rhapsody SE Identity",
+      "category": "Identity",
+      "year": "",
+      "summary": "A visual signature for Rhapsody Systems Engineering.",
+      "role": "Product branding · Visual design",
+      "status": "Selected work",
+      "featured": false,
+      "body": "Crafting a distinctive visual identity and app iconography for IBM Rhapsody Systems Engineering, giving the product a recognisable visual presence."
+    },
+    {
+      "slug": "angle",
+      "title": "Angle Brand Identity",
+      "category": "Identity",
+      "year": "",
+      "summary": "A memorable brand expression for an ambitious idea.",
+      "role": "Brand strategy · Brand identity · Visual design",
+      "status": "Selected work",
+      "featured": false,
+      "body": "Crafting a distinctive brand identity for Angle, bringing its vision to life through a cohesive and memorable visual expression."
+    }
+  ],
+  "articles": [
+    {
+      "slug": "games-and-enterprise",
+      "url": "https://ajaysinh.com/enterprise-product-design",
+      "title": "What games taught me about enterprise software",
+      "category": "Design · Games · Enterprise",
+      "date": "",
+      "summary": "Different worlds. Same human needs.",
+      "status": "Published",
+      "body": ""
+    },
+    {
+      "slug": "expert-ux-design",
+      "url": "https://ajaysinh.com/expert-ux-design-best-interface-for-experts",
+      "title": "The Best Interface for an Expert Is a Substrate, Not an Assistant",
+      "category": "Design · UX · Enterprise",
+      "date": "",
+      "summary": "A novice needs a scaffold. An expert needs a substrate.",
+      "status": "Published",
+      "body": ""
+    }
+  ],
+  "experience": [
+    {
+      "organization": "IBM",
+      "role": "Design lead · Engineering Lifecycle Management",
+      "period": "Current",
+      "description": "Shaping product design, AI experiences, and innovation across the ELM portfolio. Work has also spanned Process Mining and Blueworks Live, including IQ and Automation Planner, as well as the TRIRIGA portfolio."
+    }
+  ],
+  "pages": {
+    "about": {
+      "title": "I’m Ajay. I like making the complex make sense.",
+      "body": "I like understanding the bigger opportunity, making sense of complexity, bringing different perspectives together, and turning an idea into something real. My work sits across product design, intelligent experiences, enterprise systems, identity, and interactive experiences.\n\nI started sketching in school. Drawing came naturally, long before I knew it could become a career. Later, games and digital art opened up a bigger possibility: not just drawing things, but creating the worlds, experiences, and ideas behind them. That became the foundation for how I work today.\n\nArt taught me to see. Games taught me to think in worlds, interactions, and systems. Enterprise taught me to work with complexity, scale, technology, and real business constraints. Design brought those experiences together. I don’t see these as separate disciplines; they help me approach problems from different angles.\n\nA brief is often only the starting point. I look for the problem behind it, the opportunity around it, and what could be better. Products live inside larger ecosystems of people, technology, workflows, and business decisions. I use strategy, prototypes, systems, visual design, and experimentation to turn possibilities into something people can see, challenge, and experience.\n\nI’m currently the design lead for IBM’s Engineering Lifecycle Management portfolio, shaping product design, AI experiences, and innovation across the suite. I also mentor designers and colleagues, and share what I’m learning through talks, internal sessions, and writing.\n\nI’m drawn to difficult problems, ambitious ideas, and thoughtful teams—especially where design can change what’s possible. I’m still exploring what comes next."
+    },
+    "now": {
+      "title": "Where I am now",
+      "body": "Design lead for IBM’s Engineering Lifecycle Management portfolio, shaping product design, AI experiences, and innovation across the suite. Alongside product work, I explore new ways to solve complex customer and business problems."
+    },
+    "uses": {
+      "title": "Tools are part of the practice.",
+      "body": "A considered set of tools for thinking, making, and collaborating. This page will grow with the practice."
+    },
+    "contact": {
+      "title": "Got something worth building?",
+      "body": "Design leadership, AI product work, or a brand venture—if it’s ambitious, I want to hear about it."
+    }
+  },
+  "recognition": [
+    { "name": "Stevie Awards", "detail": "Best app design and user experience at TCS" },
+    { "name": "GDCA", "detail": "Game design for XCOM" },
+    { "name": "Apple App Store", "detail": "Editor’s Choice · Best of 2015 · Warhammer 40,000: Freeblade" },
+    { "name": "24FPS", "detail": "Six nominations in Best 3D Animation Film" },
+    { "name": "IBM", "detail": "IBM Tech recognition and Design Champion Award" }
+  ]
+}

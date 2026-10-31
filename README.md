@@ -1,115 +1,47 @@
-# Ajay Brand Website
+# Ajaysinh Barad — personal website
 
-A static digital-studio homepage for Ajaysinh Barad.
+A lightweight, portable website and self-hosted content studio. The runtime uses only Node.js built-in modules; no package installation or external service is needed to run it locally.
 
+## Start locally (Windows PowerShell)
 
+Open PowerShell in this folder and run:
 
-## Can you preview directly from GitHub?
-
-Yes, but only after GitHub Pages is turned on for this repository. GitHub does not automatically show `index.html` as a live website just because the file is in the repository.
-
-### Turn on GitHub Pages
-
-1. Open the repository on GitHub.
-2. Click **Settings**.
-3. In the left sidebar, click **Pages**.
-4. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-5. Under **Branch**, choose the branch that contains the website, usually `main`.
-6. Choose the root folder, shown as `/root`, then click **Save**.
-7. Wait a minute or two. GitHub will show a public website link on the same **Pages** screen.
-
-After GitHub Pages is enabled, the site will usually be available at a link like this:
-
-```text
-https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/
+```powershell
+$env:STUDIO_PASSWORD = Read-Host "Choose a Studio password"
+$env:SESSION_SECRET = node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"
+node server.mjs
 ```
 
-Use GitHub Pages when you want to preview or share the website without downloading the project to your computer.
+Open `http://127.0.0.1:4173` for the public site and `http://127.0.0.1:4173/studio` to edit it. If the two environment variables are not set, Studio fails closed and will not accept logins. Set a long, unique password. The server binds to localhost by default.
 
-## If the project is on GitHub
+## Deploying
 
-If you are looking at this project on GitHub, the folder is not on your computer yet. Choose one of these options first.
+This project is a small Node HTTP server, not a static-only site. Choose a host that can run Node.js and persist files. Configure these environment variables in the host dashboard:
 
-### Option A: Download the project without Git
+- `STUDIO_PASSWORD`: a long, unique administrator password.
+- `SESSION_SECRET`: a cryptographically random secret, separate from the password.
+- `SITE_URL`: the canonical public origin, such as `https://ajaysinh.com`.
+- `COOKIE_SECURE=1`: enable when HTTPS is configured.
+- `HOST=0.0.0.0` and `PORT`: set as required by the host.
 
-1. Open the GitHub repository page in your browser.
-2. Click the green **Code** button.
-3. Click **Download ZIP**.
-4. Unzip the downloaded file.
-5. Open the unzipped folder.
-6. Double-click `index.html` to preview the website.
+Terminate TLS at the host or reverse proxy. Back up `content/site.json` and `public/uploads/` together. Test backup restoration before relying on it. Do not put secrets in source control. The in-memory login session is cleared whenever the server restarts. Use a host with persistent disk, or adapt the storage layer to its durable storage service before deploying to an ephemeral filesystem.
 
-### Option B: Open the project with GitHub Desktop
+The portfolio copy and project summaries were transcribed from the public pages on ajaysinh.com. The local preview does not copy the live project imagery or private case-study details. Review any role, dates, outcomes, media rights, and confidentiality before publishing changes. Studio edits are written directly to `content/site.json` and become public immediately when saved.
 
-1. Install **GitHub Desktop** if you do not already have it.
-2. On the GitHub repository page, click the green **Code** button.
-3. Click **Open with GitHub Desktop**.
-4. After it downloads, click **Repository** in the top menu.
-5. Click **Open in Terminal**.
-6. Run `python3 -m http.server 4173`, then open `http://localhost:4173` in your browser.
+## Included
 
-### Option C: Clone with Terminal
+- Responsive pages: home, work index and case studies, thinking and articles, about, experience, experiments, now, uses, contact, search, privacy and a not-found state.
+- CMS editor with password-gated sessions, editable site identity and pages, project and article management, experience timeline, media uploads, and JSON content backup/restore.
+- A visitor journey rail, illustrated route map, backtrack/next-turn wayfinding, and project stories organized as landscape, challenge, choices and outcome.
+- A restrained color system and a locally bundled Montserrat variable font (with a system-font fallback). The Google Fonts Open Font License is included beside the font.
+- XML sitemap, robots.txt, and an RSS feed for published writing.
+- Keyboard skip link, mobile navigation, light/dark mode, reduced-motion support, semantic HTML and lazy-loaded story imagery.
+- No analytics, advertising scripts or frontend package dependencies.
 
-If you already know how to use Terminal, copy the repository URL from GitHub's green **Code** button, then run:
+## Content and files
 
-```bash
-git clone REPOSITORY_URL
-cd REPOSITORY_FOLDER_NAME
-python3 -m http.server 4173
-```
+- `content/site.json` — portable structured content.
+- `public/` — frontend, CSS, script, favicon and uploaded media.
+- `server.mjs` — HTTP server, CMS API, uploads and sitemap/RSS routes.
 
-Then open this in your browser:
-
-```text
-http://localhost:4173
-```
-
-## How to preview the website
-
-You do not open the terminal from ChatGPT. The terminal is an app on your computer. If you only want a quick preview, you can skip the terminal completely and double-click `index.html`.
-
-You do not need to be a developer to preview this project locally. Follow these steps:
-
-1. Open the project folder on your computer.
-2. Double-click `index.html` to open it in your browser.
-3. If you want the closest website-like preview, use the local server option below.
-
-### Local server preview
-
-This option makes your computer act like a tiny website server so the preview feels closer to a real website.
-
-#### How to open a terminal in the project folder
-
-**On Mac:**
-
-1. Open the folder that contains this website.
-2. Right-click inside the folder.
-3. Choose **New Terminal at Folder**.
-4. If you do not see that option, open the **Terminal** app, type `cd ` with a space after it, drag the project folder into the Terminal window, then press **Enter**.
-
-**On Windows:**
-
-1. Open the folder that contains this website.
-2. Click the address bar at the top of File Explorer.
-3. Type `cmd` and press **Enter**.
-4. A Command Prompt window should open already inside the project folder.
-
-If Python is installed, run this command in that terminal window:
-
-```bash
-python3 -m http.server 4173
-```
-
-Then open this address in your browser:
-
-```text
-http://localhost:4173
-```
-
-To stop the preview server, go back to the terminal and press `Control + C`.
-
-### Quick file guide
-
-- `index.html` controls the page content and structure.
-- `styles.css` controls the visual design, layout, and animations.
-- `script.js` controls interactive effects like scroll reveals, cursor behavior, and parallax movement.
+The Studio upload limit is 30 MB per image or video. Uploaded assets can be referenced from a project/article using the `/uploads/...` URL shown in the Media tab. Keep independent backups of the media folder as well as the content JSON.
